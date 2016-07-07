@@ -8,7 +8,7 @@ function get_todos() {
 }
 
 function add() {
-  var task = document.getElementId('task').value;
+  var task = document.getElementById('task').value;
 
   var todos = get_todos();
   todos.push(task);
@@ -39,7 +39,7 @@ function show() {
   };
   html += '</ul>';
 
-  document.getElementId('todos').innerHTML = html;
+  document.getElementById('todos').innerHTML = html;
 
   var buttons = document.getElementsByClassName('remove');
   for (var i=0; i < buttons.length; i++) {
@@ -47,5 +47,5 @@ function show() {
   };
 }
 
-document.getElementId('add').addEventListener('click', add);
+document.getElementById('add').addEventListener('click', add);
 show();
